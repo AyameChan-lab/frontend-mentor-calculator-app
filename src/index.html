@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div id="main-container" class="container theme-1">
+        <div class="parent">
+            <div class="top">
+                <h6>calc</h6>
+                <div class="toggle-themes-box">
+                    <p>THEME</p>
+                    <div class="toggle-wrapper">
+                        <span id="toggle-btn"></span>
+                        <div class="theme-number">
+                            <span>1</span><span>2</span><span>3</span>
+                        </div>
+                        <div class="units">
+                            <span id="unit1"></span><span id="unit2"></span><span id="unit3"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen">
+              <span id="expression"></span>
+               <span id="expression-hero">0</span>
+            </div>
+            <div class="keypads-box">
+                <span key="normal-op">7</span>
+                <span key="normal-op">8</span>
+                <span key="normal-op">9</span>
+                <span key="delete">DEL</span>
+                <span key="normal-op">4</span>
+                <span key="normal-op">5</span>
+                <span key="normal-op">6</span>
+                <span key="op">+</span>
+                <span key="normal-op">1</span>
+                <span key="normal-op">2</span>
+                <span key="normal-op">3</span>
+                <span key="op">-</span>
+                <span key="normal-op">.</span>
+                <span key="normal-op">0</span>
+                <span key="op">/</span>
+                <span key="op">x</span>
+                <span key="reset">RESET</span>
+                <span key="eq">=</span>
+            </div>
+        </div>
+    </div>
+    <script src="../dist/index.js"></script>
+</body>
+</html>

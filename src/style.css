@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    text-decoration:0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+:root {
+    /* Theme 1 */
+    /* Background */
+    --theme1-main-bgm: hsl(222, 26%, 31%);
+    --theme1-toggleAndkeypad-bgm: hsl(223, 31%, 20%);
+    --theme1-theme-screen-bgm:hsl(224, 36%, 15%);
+    /*  Keys  */
+    --theme1-del-reset-bgm:hsl(225, 21%, 49%);
+    --theme1-del-reset-shadow:hsl(224, 28%, 35%);
+    --theme1-del-reset-hover: hsl(219, 12%, 63%);
+
+    --theme1-keyEqAndtoggle-bgm: hsl(6, 63%, 50%);
+    --theme1-eq-keyshadow: hsl(6, 70%, 34%);
+    --theme1-eqAndToggle-hover: hsl(5, 59%, 56%);
+
+    --theme1-normalkey-bgm: hsl(30, 25%, 89%);
+    --theme1-normalkey-shadow: hsl(28, 16%, 65%);
+    --theme1-normalkey-hover: hsl(0, 0%, 100%);
+    /*  Text  */
+    --theme1-keypad-color: hsl(221, 14%, 31%);
+    --theme1-text-normal-del-reset-color: hsl(0, 0%, 100%);
+    --theme1-text-expression: hsl(0, 1%, 70%);
+    /* Theme 2 */
+    /* Background */
+    --theme2-main-bgm:  hsl(0, 0%, 90%);
+    --theme2-toggleAndkeypad-bgm: hsl(0, 5%, 81%);
+    --theme2-theme-screen-bgm:hsl(0, 0%, 93%);
+    /*  Keys  */
+    --theme2-del-reset-bgm:hsl(185, 42%, 37%);
+    --theme2-del-reset-shadow:hsl(185, 58%, 25%);
+    --theme2-del-reset-hover: hsl(185, 54%, 57%);
+
+    --theme2-keyEqAndtoggle-bgm: hsl(25, 98%, 40%);
+    --theme2-eq-keyshadow:hsl(25, 99%, 27%);
+    --theme2-eqAndToggle-hover: hsl(25, 100%, 61%);
+
+    --theme2-normalkey-bgm: hsl(45, 7%, 89%);
+    --theme2-normalkey-shadow: hsl(35, 11%, 61%);
+    --theme2-normalkey-hover: hsl(0, 0%, 100%);
+    /*  Text  */
+    --theme2-keypad-color: hsl(60, 10%, 19%);
+    --theme2-text-del-reset-color: hsl(0, 0%, 100%);
+    --theme2-text-normal:#000;
+    --theme2-text-expression: #4d4d4d;
+
+
+    /* Theme 3 */
+    /* Background */
+    --theme3-main-bgm: hsl(268, 75%, 9%);
+    --theme3-toggleAndkeypad-screen-bgm: hsl(268, 71%, 12%);
+    /*  Keys  */
+    --theme3-del-reset-bgm:hsl(281, 89%, 26%);
+    --theme3-del-reset-shadow:hsl(285, 91%, 52%);
+    --theme3-del-reset-hover: hsl(281, 83%, 45%);;
+
+    --theme3-keyEqAndtoggleBtn-bgm: hsl(176, 100%, 44%);
+    --theme3-eq-keyshadow:hsl(177, 92%, 70%);
+    --theme3-eqAndToggle-hover: hsl(175, 100%, 67%);
+
+    --theme3-normalkey-bgm:hsl(268, 47%, 21%);
+    --theme3-normalkey-shadow:  hsl(290, 70%, 36%);
+    --theme3-normalkey-hover: hsl(267, 47%, 36%);
+    /*  Text  */
+    --theme3-keypadtext-text-normal-color: hsl(52, 100%, 62%);
+    --theme3-text-del-reset-color: hsl(0, 0%, 100%);
+    --theme3-text-expression: hsl(47, 96%, 74%);
+}
+
+.theme-1 {
+    background: var(--theme1-main-bgm);
+    .parent {
+        .top {
+            color:var(--theme1-text-normal-del-reset-color);
+            .toggle-themes-box {
+                .toggle-wrapper {
+                    background: var(--theme1-toggleAndkeypad-bgm);
+                    #toggle-btn {
+                        background: var(--theme1-keyEqAndtoggle-bgm);
+                        &:hover {
+                            background:var(--theme1-eqAndToggle-hover);
+                        }
+                    }
+                }
+            }
+        }
+
+        .screen {
+            background: var(--theme1-theme-screen-bgm);
+            color: var(--theme1-text-normal-del-reset-color);
+            #expression {
+                color: var(--theme1-text-expression);
+            }
+        }
+
+        .keypads-box {
+            background: var(--theme1-toggleAndkeypad-bgm);
+
+            > span[key="normal-op"],>span[key="op"]{
+                background: var(--theme1-normalkey-bgm);
+                box-shadow: 0 3px var(--theme1-normalkey-shadow);
+                &:hover {
+                    background: var(--theme1-normalkey-hover);
+                }
+            }
+            > span[key="delete"]{
+                background: var(--theme1-del-reset-bgm);
+                color: var(--theme1-text-normal-del-reset-color);
+                box-shadow: 0 3px var(--theme1-del-reset-shadow);
+                &:hover {
+                    background: var(--theme1-del-reset-hover);
+                }
+            }
+            > span[key="reset"]{
+                background:var(--theme1-del-reset-bgm);
+                color: var(--theme1-text-normal-del-reset-color);
+                box-shadow: 0 3px var(--theme1-del-reset-shadow);
+                &:hover {
+                    background: var(--theme1-del-reset-hover);
+                }
+            }  > span[key="eq"]{
+                   background:var(--theme1-keyEqAndtoggle-bgm);
+                   color: var(--theme1-text-normal-del-reset-color);
+                   box-shadow: 0 3px var(--theme1-eq-keyshadow);
+                   &:hover {
+                       background: var(--theme1-eqAndToggle-hover);
+                   }
+               }
+        }
+    }
+}
+.theme-2 {
+    background: var(--theme2-main-bgm);
+    .parent {
+        .top {
+            color:var(--theme2-text-normal);
+            .toggle-themes-box {
+                .toggle-wrapper {
+                    background: var(--theme2-toggleAndkeypad-bgm);
+                    #toggle-btn {
+                        background: var(--theme2-keyEqAndtoggle-bgm);
+                        &:hover {
+                            background:var(--theme2-eqAndToggle-hover);
+                        }
+                    }
+                }
+            }
+        }
+
+        .screen {
+            background: var(--theme2-theme-screen-bgm);
+            color: var(--theme2-text-normal);
+            #expression {
+                color: var(--theme2-text-expression);
+            }
+        }
+
+        .keypads-box {
+            background: var(--theme2-toggleAndkeypad-bgm);
+
+            > span[key="normal-op"],>span[key="op"]{
+                background: var(--theme2-normalkey-bgm);
+                box-shadow: 0 3px var(--theme2-normalkey-shadow);
+                &:hover {
+                    background: var(--theme2-normalkey-hover);
+                }
+            }
+            > span[key="delete"]{
+                background: var(--theme2-del-reset-bgm);
+                color: var(--theme2-text-del-reset-color);
+                box-shadow: 0 3px var(--theme2-del-reset-shadow);
+                &:hover {
+                    background: var(--theme2-del-reset-hover);
+                }
+            }
+            > span[key="reset"]{
+                background:var(--theme2-del-reset-bgm);
+                color: var(--theme2-text-del-reset-color);
+                box-shadow: 0 3px var(--theme2-del-reset-shadow);
+                &:hover {
+                    background: var(--theme2-del-reset-hover);
+                }
+            }  > span[key="eq"]{
+                   background:var(--theme2-keyEqAndtoggle-bgm);
+                   color: var(--theme2-text-del-reset-color);
+                   box-shadow: 0 3px var(--theme2-eq-keyshadow);
+                   &:hover {
+                       background: var(--theme2-eqAndToggle-hover);
+                   }
+               }
+        }
+    }
+}
+.theme-3 {
+    background: var(--theme3-main-bgm);
+    .parent {
+        .top {
+            color:var(--theme3-keypadtext-text-normal-color);
+            .toggle-themes-box {
+                .toggle-wrapper {
+                    background: var(--theme3-toggleAndkeypad-screen-bgm);
+                    #toggle-btn {
+                        background: var(--theme3-keyEqAndtoggleBtn-bgm);
+                        &:hover {
+                            background:var(--theme3-eqAndToggle-hover);
+                        }
+                    }
+                }
+            }
+        }
+
+        .screen {
+            background: var(--theme3-toggleAndkeypad-screen-bgm);
+            color: var(--theme3-keypadtext-text-normal-color);
+            #expression {
+                color: var(--theme3-text-expression);
+            }
+        }
+
+        .keypads-box {
+            background: var(--theme3-toggleAndkeypad-screen-bgm);
+
+            > span[key="normal-op"],>span[key="op"]{
+                background: var(--theme3-normalkey-bgm);
+                box-shadow: 0 3px var(--theme3-normalkey-shadow);
+                color: var(--theme3-keypadtext-text-normal-color);
+                &:hover {
+                    background: var(--theme3-normalkey-hover);
+                }
+            }
+            > span[key="delete"]{
+                background: var(--theme3-del-reset-bgm);
+                color: var(--theme3-text-del-reset-color);
+                box-shadow: 0 3px var(--theme1-del-reset-shadow);
+                &:hover {
+                    background: var(--theme3-del-reset-hover);
+                }
+            }
+            > span[key="reset"]{
+                background: var(--theme3-del-reset-bgm);
+                color: var(--theme3-text-del-reset-color);
+                box-shadow: 0 3px var(--theme1-del-reset-shadow);
+                &:hover {
+                    background: var(--theme3-del-reset-hover);
+                }
+            }  > span[key="eq"]{
+                   background:var(--theme3-keyEqAndtoggleBtn-bgm);
+                   color: #000;
+                   box-shadow: 0 3px var(--theme3-eq-keyshadow);
+                   &:hover {
+                       background: var(--theme3-eqAndToggle-hover);
+                   }
+               }
+        }
+    }
+}
+.container {
+    transition: .3s;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+    .parent {
+        width: 35%;
+        min-width: 320px;
+
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 7px;
+            > h6 {
+                font-size: 36px;
+            }
+
+            .toggle-themes-box {
+                display: flex;
+                align-items: center;
+                .toggle-wrapper {
+                    width: 60px;
+                    height: 20px;
+                    border-radius: 30px;
+                    margin-left: 20px;
+                    position: relative;
+
+                    #toggle-btn {
+                        display: inline-block;
+                        padding: 8px;
+                        border-radius: 100%;
+                        margin-top: 2px;
+                        margin-left:2px;
+                        transition: .3s;
+                        position: relative;
+                        z-index:1;
+                        cursor:pointer;
+
+                        &:hover {
+                            transition: .2s;
+                        }
+                    }
+                    .theme-number {
+                        letter-spacing: 12px;
+                        position: absolute;
+                        top: -17px;
+                        left: 7px;
+                    }
+                }
+            }
+        }
+
+        .screen {
+            user-select:none;
+            height: 100px;
+            border-radius: 10px;
+            margin: 22px 0 10px;
+            font-size: 36px;
+            display: flex;
+            align-items:center;
+            justify-content: right;
+            padding: 0 15px;
+            overflow-x: hidden;
+            position: relative;
+            #expression {
+                position: absolute;
+                top:12px;
+                right: 27px;
+                font-size: 20px;
+            }
+        }
+
+        .keypads-box {
+            border-radius: 10px;
+            display: grid;
+            grid: auto auto auto auto auto / 1fr 1fr 1fr 1fr;
+            padding: 18px;
+            text-align: center;
+            grid-gap: 18px;
+            > span {
+                position: relative;
+                border-radius: 7px;
+                cursor: pointer;
+                user-select:none;
+                padding: 15px 0;
+            }
+            > span[key="reset"]{
+                grid-column: span 2;
+            }  > span[key="eq"]{
+                   grid-column: span 2;
+               }
+        }
+    }
+}
+
+.units {
+    display:flex;
+    position: absolute;
+    top:2px;
+    cursor:pointer;
+}
+#unit1,#unit2,#unit3 {
+    display: inline-block;
+    width: 20px;
+    height:15px;
+}
+.mouse-down {
+    box-shadow:none !important;
+    top:3px;
+}
